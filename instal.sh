@@ -10,7 +10,7 @@ fi
 
 read -p "Apakah Anda ingin mengaktifkan bash-completion [Y/n]: " nanya
 
-if [[ "${nanya}" == "N" || "${nanya}" == "n" ]]; then
+if [[ "${nanya}" == "Y" || "${nanya}" == "y" ]]; then
         # File
         file_bash_completion="bash-completion.sh"
         file_bashrc=/etc/bash.bashrc
