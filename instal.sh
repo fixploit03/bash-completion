@@ -8,16 +8,27 @@ if [[ $EUID -ne 0 ]]; then
 	echo "Skrip ini harus dijalankan sebagai root!"
 fi
 
-file_bash_completion="bash-completion.sh"
-file_bashrc=/etc/bash.bashrc
+read -p "Apakah Anda ingin mengaktifkan bash-completion [Y/n]: " nanya
 
-if [[ ! -f "${file_bashrc}" ]]; then
-	echo "[-] File ${file} tidak ditemukan. bash-completion gagal diaktifkan."
+if [[ "${nanya}" == "N" || "${nanya}" == "n" ]]; then
+        # File
+        file_bash_completion="bash-completion.sh"
+        file_bashrc=/etc/bash.bashrc
+
+        # Kondisi jika file bashrc tidak ditemukan 
+        if [[ ! -f "${file_bashrc}" ]]; then
+	        echo "[-] File ${file} tidak ditemukan. bash-completion gagal diaktifkan."
+        	exit 1
+        fi
+
+        echo "" >> "${file_bashrc}"
+        cat "${file_bash_completion}" >> "${file_bashrc}"
+        echo "[+] bash-completion berhasil diaktifkan."
+        exit 0
+elif [[ "${nanya}" == "N" || "${nanya}" == "n" ]]; then
+        echo "[*] Semoga harimu menyenangkan ^_^"
+	exit 0
+ else
+        echo "[-] Masukkan tidak valid."
 	exit 1
-fi
-
-echo "" >> "${file_bashrc}"
-cat "${file_bash_completion}" >> "${file_bashrc}"
-echo "[+] bash-completion berhasil diaktifkan."
-exit 0
-
+ fi
