@@ -29,6 +29,6 @@ elif [[ "${nanya}" == "N" || "${nanya}" == "n" ]]; then
         echo "[*] Semoga harimu menyenangkan ^_^"
 	exit 0
  else
-        echo "[-] Masukkan tidak valid."
+        echo "[-] Masukkan tidak valid. Harap masukkan 'Y/n'."
 	exit 1
  fi
