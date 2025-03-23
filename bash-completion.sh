@@ -1,5 +1,7 @@
-# Dibuat oleh: fixploit03
-# Github: https://github.com/fixploit03/bash-completion
+#!/bin/bash
+#..............: bash-completion.sh
+#..............: Dibuat oleh: fixploit03
+#..............: Github: https://github.com/fixploit03/bash-completion
 
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
@@ -11,3 +13,4 @@ if ! shopt -oq posix; then
 fi
 
 bind "set completion-ignore-case on"
+# - END -
