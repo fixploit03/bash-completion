@@ -1,6 +1,6 @@
 #!/bin/bash
 #..............: instal.sh
-#..............: Dibuat oleh: fixploit03
+#..............: Dibuat oleh: Rofi (fixploit03)
 #..............: Github: https://github.com/fixploit03/bash-completion
 
 if [[ $EUID -ne 0 ]]; then
