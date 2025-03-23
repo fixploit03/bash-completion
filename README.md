@@ -25,10 +25,11 @@ Berikut ini adalah langkah-langkah untuk menginstal bash-completion:
 
 ```sh
 $ sudo apt-get update -y
+$ sudo apt-get install bash -y
 $ sudo apt-get install git -y
-git clone https://github.com/fixploit03/bash-completion.git
-cd bash-completion
-chmod +x instal.sh
+$ git clone https://github.com/fixploit03/bash-completion.git
+$ cd bash-completion
+$ chmod +x instal.sh
 $ sudo ./instal.sh
 ```
 
