@@ -1,6 +1,6 @@
 #!/bin/bash
 #..............: bash-completion.sh
-#..............: Dibuat oleh: fixploit03
+#..............: Dibuat oleh: Rofi (fixploit03)
 #..............: Github: https://github.com/fixploit03/bash-completion
 
 # enable bash completion in interactive shells
